@@ -240,68 +240,39 @@ var customBuild = function(data, map) {
 
 	// Creates a table with tabulations of #killed and #hit of different races
 	var table = document.getElementById("table");
+	var column = document.getElementById("table");
+	for (i = 0; i < 8; i++) {
+		$("#table").append("<tr id=" + "\"tr" + i + "\"" + ">" + "</tr>");
+		$("#tr" + i).append("<div " + "class=\"col-xs-4\" id=\"" + "col" + i + "\"" + "></div>");
+		$("#tr" + i).append("<div " + "class=\"col-xs-4\" id=\"" + "coll" + i + "\"" + "></div>");
 
-	var row1 = table.insertRow(0);
-	var row2 = table.insertRow(1);
-	var row3 = table.insertRow(2);
-	var row4 = table.insertRow(3);
-	var row5 = table.insertRow(4);
-	var row6 = table.insertRow(5);
-	var row7 = table.insertRow(6);
+	}
 	
-	var cell1 = row1.insertCell(0);
-	var cell2 = row1.insertCell(1);
-	var cell3 = row1.insertCell(2);
-	var cell4 = row1.insertCell(3);
-	var cell5 = row1.insertCell(4);
-	var cell6 = row1.insertCell(5);
-	var cell7 = row1.insertCell(6);
+	//Manually insert and populate cells
+    $("#col0").append("<h3>Data</h3>");
+    $("#col1").append("White");
+    $("#col2").append("Asian");
+    $("#col3").append("Unkown");
+    $("#col4").append("Black or African American");
+    $("#col5").append("American Indian or Alska Native");
+    $("#col6").append("Native Hawaiian or Other Pacific Islander");
 
-	cell1.innerHTML = "<b>Data</b>";
-	cell2.innerHTML = "Killed";
-	cell3.innerHTML = "Hit";
+    $("#tr0").append("<h3>Hit</h3>");
+    $("#tr1").append(Whitehit);
+    $("#tr2").append(Asianhit);
+    $("#tr3").append(Unknownhit);
+    $("#tr4").append(Blackhit);
+    $("#tr5").append(IndianNativehit);
+    $("#tr6").append(HawaiianPacifichit);
 
-	var cell4 = row2.insertCell(0);
-	var cell5 = row2.insertCell(1);
-	var cell6 = row2.insertCell(2);
-	cell4.innerHTML = "White";
-	cell5.innerHTML = Whitehit;
-	cell6.innerHTML = WhiteKilled;
 
-	var cell7 = row3.insertCell(0);
-	var cell8 = row3.insertCell(1);
-	var cell9 = row3.insertCell(2);
-	cell7.innerHTML = "Asian";
-	cell8.innerHTML = Asianhit;
-	cell9.innerHTML = AsianKilled;
-
-	var cell10 = row4.insertCell(0);
-	var cell11 = row4.insertCell(1);
-	var cell12 = row4.insertCell(2);
-	cell10.innerHTML = "Unkown";
-	cell11.innerHTML = Unknownhit;
-	cell12.innerHTML = UnknownKilled;
-
-	var cell13 = row5.insertCell(0);
-	var cell14 = row5.insertCell(1);
-	var cell15 = row5.insertCell(2);
-	cell13.innerHTML = "Black or African American";
-	cell14.innerHTML = Blackhit;
-	cell15.innerHTML = BlackKilled;
-
-	var cell16 = row6.insertCell(0);
-	var cell17 = row6.insertCell(1);
-	var cell18 = row6.insertCell(2);
-	cell16.innerHTML = "American Indian or Alaska Native";
-	cell17.innerHTML = IndianNativehit;
-	cell18.innerHTML = IndianNativeKilled;
-
-	var cell19 = row7.insertCell(0);
-	var cell20 = row7.insertCell(1);
-	var cell21 = row7.insertCell(2);
-	cell19.innerHTML = "Native Hawaiian or Other Pacific Islander";
-	cell20.innerHTML = HawaiianPacifichit;
-	cell21.innerHTML = HawaiianPacificKilled;
+    $("#coll0").append("<h3>Killed</h3>");
+    $("#coll1").append(WhiteKilled);
+    $("#coll2").append(AsianKilled);
+    $("#coll3").append(UnknownKilled);
+    $("#coll4").append(BlackKilled);
+    $("#coll5").append(IndianNativeKilled);
+    $("#coll6").append(HawaiianPacificKilled);
 
 	// Be sure to add each layer to the map
 	L.control.layers(null, overlayMaps).addTo(map);

@@ -31,9 +31,13 @@ h1 {
 	text-transform: uppercase;
 }
 
+/* Makes the title for the table white */
+h2 {
+	color: white;
+}
+
 /* Makes tablebackground white, adjusts spacing, makes margin from top great, changes font */
 .container {
-	color: white;
 	text-align: justify;
 	line-height: 20px;
 	font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
@@ -47,7 +51,16 @@ h1 {
 	position: fixed;
  	left: 0;
  	right: 0;
-	margin: auto;
 	width: 80%;
 	height: 500px;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Makes the table centered, have a line between the title and the data */
+#table {
+	text-align: center;
+	border-top: 2px solid;
+	border-color: white;
 }
