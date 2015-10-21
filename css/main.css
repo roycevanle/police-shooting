@@ -1,4 +1,53 @@
 /* You'll probably want to add some styles here */
-#container {
-	height:800px;
+
+/* Imports different fonts */
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/* Makes body of website grey */
+body {
+	background-color: #888888;
+}
+
+/* Makes header have a background */
+#heading {
+	background-color: #606060;
+	width: 100%;
+	padding-top: 10px;
+	top: 0;
+	font-size: 16px;
+	padding-bottom: 5px;
+}
+
+/* Makes biggest header centered, bigger, and close to the top */
+h1 {
+	font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 40px;
+	margin-top: 0px;
+	text-align: center;
+	color: black;
+	text-transform: uppercase;
+}
+
+/* Makes tablebackground white, adjusts spacing, makes margin from top great, changes font */
+.container {
+	color: white;
+	text-align: justify;
+	line-height: 20px;
+	font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
+	position: relative;
+	background-color: #686868;
+	width: 80%;
+}
+
+/* Centers the map, limits to a certain height and width */
+#map {
+	position: fixed;
+ 	left: 0;
+ 	right: 0;
+	margin: auto;
+	width: 80%;
+	height: 500px;
 }
