@@ -48,7 +48,6 @@ h2 {
 
 /* Centers the map, limits to a certain height and width */
 #map {
-	position: fixed;
  	left: 0;
  	right: 0;
 	width: 80%;
@@ -56,6 +55,7 @@ h2 {
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 100px;
 }
 
 /* Makes the table centered, have a line between the title and the data */
@@ -63,4 +63,5 @@ h2 {
 	text-align: center;
 	border-top: 2px solid;
 	border-color: white;
+	margin-bottom: 100px;
 }
